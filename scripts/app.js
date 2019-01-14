@@ -38,6 +38,7 @@
     navigator.serviceWorker.addEventListener('message', function (event) {
       /* TOLGO LOADING*/   
       /* MOSTRO LA PAGINA */
+        console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAs')
         var main = document.getElementById("main");
         var loading = document.getElementById("loading");
         loading.style.display = "none";
