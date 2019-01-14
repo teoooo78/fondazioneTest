@@ -20,20 +20,30 @@
     isLoading: true
   };
 
-  // var main = document.getElementById("main");
-  // main.style.display = "none";
+  var _main = document.getElementById("main");
+  var _loading = document.getElementById("loading");
+  var _loaded = localStorage.getItem("fond_antonveneta_loaded");
+  if(_loaded=='1'){
+    _self._loading.style.display = "none";
+    _self.main.style.display = "block";
+  }else{
+    _self._loading.style.display = "block";
+    _self.main.style.display = "none";
+  }
+  
 
 
   if ('serviceWorker' in navigator) {
     // Handler for messages coming from the service worker
     navigator.serviceWorker.addEventListener('message', function (event) {
       /* TOLGO LOADING*/   
-      console.log('XXXXXXXXXXXXXXX')
       /* MOSTRO LA PAGINA */
         var main = document.getElementById("main");
         var loading = document.getElementById("loading");
         loading.style.display = "none";
         main.style.display = "block";
+      /*setta local storage*/
+      localStorage.setItem('fond_antonveneta_loaded', '1');
     });
   }
 
