@@ -99,7 +99,15 @@ self.addEventListener('activate', function(event) {
   );
 });   */     
 
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+});
 
+/*
 self.addEventListener('fetch', function (e) {
   console.log('[Service Worker] Fetch', e.request.url);
   var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
@@ -120,4 +128,4 @@ self.addEventListener('fetch', function (e) {
       })
     );
   }
-});
+});*/
