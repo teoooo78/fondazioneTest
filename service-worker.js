@@ -16,31 +16,32 @@ var dataCacheName = 'app-v1';
 var cacheName = 'appFinal-1';
 var filesToCache = [
   /* HTML */
-  '/',
-  '/index.html',
-  '/audio.html',
-  '/testo.html',
+  'index.html'
+  /*,
+  'audio.html',
+  'testo.html',
 
-  /* CSS */
+  // CSS 
   '/styles/bootstrap.min.css',
   '/styles/bootstrap.min.css.map',
 
-  /* JS */
+  // JS
   '/scripts/app.js',
+  // '/service-worker.js',
 
 
-  /* IMMAGNI 
+  // IMMAGNI 
   '/images/icon_blind.png',
-  '/images/icon_noblind.png',*/
+  '/images/icon_noblind.png',
   '/images/cavallo.jpg',
   '/images/cane.jpg',
   '/images/gatto.jpg',
 
 
-  /* AUDIO */
+  // AUDIO 
   '/audio/cavallo.mp3',
   '/audio/cane.mp3',
-  '/audio/gatto.mp3'
+  '/audio/gatto.mp3'*/
 ];
 
 self.addEventListener('install', function (e) {
