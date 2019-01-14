@@ -73,7 +73,7 @@ self.addEventListener('activate', function(event) {
 });
 
 
-self.addEventListener('fetch', function(event) {
+/*self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
@@ -97,10 +97,10 @@ self.addEventListener('fetch', function(event) {
         }
       })
   );
-});        
+});   */     
 
 
-/*self.addEventListener('fetch', function (e) {
+self.addEventListener('fetch', function (e) {
   console.log('[Service Worker] Fetch', e.request.url);
   var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
   if (e.request.url.indexOf(dataUrl) > -1) {
@@ -108,6 +108,7 @@ self.addEventListener('fetch', function(event) {
       caches.open(dataCacheName).then(function (cache) {
         return fetch(e.request).then(function (response) {
           cache.put(e.request.url, response.clone());
+          console.log('cache di ' + e.request.url)
           return response;
         });
       })
@@ -119,4 +120,4 @@ self.addEventListener('fetch', function(event) {
       })
     );
   }
-});*/
+});
