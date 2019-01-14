@@ -74,6 +74,7 @@ self.addEventListener('activate', function(event) {
     console.log('[ServiceWorker] client.postMessage');
       return self.clients.matchAll().then(function(clients) {
         return Promise.all(clients.map(function(client) {
+          console.log('[ServiceWorker] client.postMessage XXXXXX');
           return client.postMessage('The service worker has activated and ' +
             'taken control.');
         }));
