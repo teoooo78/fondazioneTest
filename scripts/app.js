@@ -20,15 +20,15 @@
     isLoading: true
   };
 
-  var main = document.getElementById("main");
-  main.style.display = "none";
+  // var main = document.getElementById("main");
+  // main.style.display = "none";
 
 
   if ('serviceWorker' in navigator) {
     // Handler for messages coming from the service worker
     navigator.serviceWorker.addEventListener('message', function (event) {
       /* TOLGO LOADING*/   
-      console.log(event)
+      console.log('XXXXXXXXXXXXXXX')
       /* MOSTRO LA PAGINA */
         var main = document.getElementById("main");
         var loading = document.getElementById("loading");
