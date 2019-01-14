@@ -24,11 +24,11 @@
   var _loading = document.getElementById("loading");
   var _loaded = localStorage.getItem("fond_antonveneta_loaded");
   if(_loaded=='1'){
-    _self._loading.style.display = "none";
-    _self.main.style.display = "block";
+    _loading.style.display = "none";
+    _main.style.display = "block";
   }else{
-    _self._loading.style.display = "block";
-    _self.main.style.display = "none";
+    _loading.style.display = "block";
+    _main.style.display = "none";
   }
   
 
