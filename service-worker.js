@@ -59,6 +59,7 @@ self.addEventListener('activate', function(event) {
   console.log('[ServiceWorker] Activate NUOVA');
 
   event.waitUntil(
+    console.log('[ServiceWorker] event.waitUntil');
     caches.keys().then(function (keyList) {
       return Promise.all(keyList.map(function (key) {
         if (key !== cacheName && key !== dataCacheName) {
@@ -67,8 +68,10 @@ self.addEventListener('activate', function(event) {
         }
       }));
     }).then(function() {
+    console.log('[ServiceWorker] clients.claim()');
       return clients.claim();
     }).then(function() {
+    console.log('[ServiceWorker] client.postMessage');
       return self.clients.matchAll().then(function(clients) {
         return Promise.all(clients.map(function(client) {
           return client.postMessage('The service worker has activated and ' +
