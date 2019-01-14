@@ -17,9 +17,9 @@ var cacheName = 'appFinal-1';
 var filesToCache = [
   /* HTML */
   'index.html'
-  /*,
+  ,
   'audio.html',
-  'testo.html',
+  'testo.html'/*,
 
   // CSS 
   '/styles/bootstrap.min.css',
