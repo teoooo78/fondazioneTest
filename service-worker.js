@@ -15,6 +15,7 @@
 var dataCacheName = 'app-v1';
 var cacheName = 'appFinal-1';
 var filesToCache = [
+  'manifest.json',
   /* HTML */
   'index.html'
   ,'audio.html',
