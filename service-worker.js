@@ -27,12 +27,11 @@ var filesToCache = [
 
   /* JS */
   '/scripts/app.js',
-  '/service-worker.js',
 
 
-  /* IMMAGNI */
+  /* IMMAGNI 
   '/images/icon_blind.png',
-  '/images/icon_noblind.png',
+  '/images/icon_noblind.png',*/
   '/images/cavallo.jpg',
   '/images/cane.jpg',
   '/images/gatto.jpg',
