@@ -73,18 +73,37 @@ self.addEventListener('activate', function(event) {
 });
 
 
+addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;     // if valid response is found in cache return it
+        } else {
+          return fetch(event.request)     //fetch from internet
+            .then(function(res) {
+              return caches.open(dataCacheName)
+                .then(function(cache) {
+                  cache.put(event.request.url, res.clone());    //save the response for future
+                  return res;   // return the fetched data
+                })
+            })
+            .catch(function(err) {       // fallback mechanism
+              return caches.open(dataCacheName)
+                .then(function(cache) {
+                  return cache.match('/offline.html');
+                });
+            });
+        }
+      })
+  );
+});        
 
-self.addEventListener('fetch', function (e) {
+
+/*self.addEventListener('fetch', function (e) {
   console.log('[Service Worker] Fetch', e.request.url);
   var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
   if (e.request.url.indexOf(dataUrl) > -1) {
-    /*
-     * When the request URL contains dataUrl, the app is asking for fresh
-     * weather data. In this case, the service worker always goes to the
-     * network and then caches the response. This is called the "Cache then
-     * network" strategy:
-     * https://jakearchibald.com/2014/offline-cookbook/#cache-then-network
-     */
     e.respondWith(
       caches.open(dataCacheName).then(function (cache) {
         return fetch(e.request).then(function (response) {
@@ -94,15 +113,10 @@ self.addEventListener('fetch', function (e) {
       })
     );
   } else {
-    /*
-     * The app is asking for app shell files. In this scenario the app uses the
-     * "Cache, falling back to the network" offline strategy:
-     * https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network
-     */
     e.respondWith(
       caches.match(e.request).then(function (response) {
         return response || fetch(e.request);
       })
     );
   }
-});
+});*/
