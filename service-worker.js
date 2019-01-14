@@ -22,26 +22,26 @@ var filesToCache = [
   'testo.html',
 
   // CSS 
-  '/styles/bootstrap.min.css',
-  '/styles/bootstrap.min.css.map',
+  'styles/bootstrap.min.css',
+  'styles/bootstrap.min.css.map',
 
   // JS
-  '/scripts/app.js',
+  'scripts/app.js',
   // '/service-worker.js',
 
 
   // IMMAGNI 
-  '/images/icon_blind.png',
-  '/images/icon_noblind.png',
-  '/images/cavallo.jpg',
-  '/images/cane.jpg',
-  '/images/gatto.jpg',
+  'images/icon_blind.png',
+  'images/icon_noblind.png',
+  'images/cavallo.jpg',
+  'images/cane.jpg',
+  'images/gatto.jpg',
 
 
   // AUDIO 
-  '/audio/cavallo.mp3',
-  '/audio/cane.mp3',
-  '/audio/gatto.mp3'
+  'audio/cavallo.mp3',
+  'audio/cane.mp3',
+  'audio/gatto.mp3'
 ];
 
 self.addEventListener('install', function (e) {
