@@ -19,7 +19,7 @@ var filesToCache = [
   'index.html'
   ,
   'audio.html',
-  'testo.html'/*,
+  'testo.html',
 
   // CSS 
   '/styles/bootstrap.min.css',
@@ -41,7 +41,7 @@ var filesToCache = [
   // AUDIO 
   '/audio/cavallo.mp3',
   '/audio/cane.mp3',
-  '/audio/gatto.mp3'*/
+  '/audio/gatto.mp3'
 ];
 
 self.addEventListener('install', function (e) {
