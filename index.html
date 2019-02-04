@@ -1,76 +1,154 @@
-<!--
- Copyright 2016 Google Inc.
- 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- 
-      http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
-
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="last-modified" content="Sun, 01 Jan 2019 14:00:46 GMT " />
-<meta http-equiv="cache-control" content="Public" />
-<meta http-equiv="max-age" content="60000000" />
-  <title>Test audio</title>
-  <link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test audio</title>
+<link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
 
-  <!-- TODO add manifest here -->
-  <link rel="manifest" href="manifest.json">
-  <!-- Add to home screen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Test audio PWA">
-  <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
+<!-- TODO add manifest here -->
+<link rel="manifest" href="manifest.json">
+<!-- Add to home screen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Test audio PWA">
+<link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
+<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+<meta name="msapplication-TileColor" content="#2F3BA2">
 
+
+<style>
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 0px;
+  margin-top: 80px;
+  
+}
+</style>
 
 </head>
 
 <body>
 
-  <div id="loading" class="container">LOADING</div>
-  <div id="main" class="container">
-    <div class="row">
-      <div class="col">
-        <div class="card">
-          <a href="audio.html">
-              <img class="card-img-top" src="./images/icon_blind.png" alt="Accesso sezione lettura Screen reader">
-            </a>
-          <div class="card-body">
-            <h5 class="card-title">Sezione con audio</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <a href="testo.html">
-            <img class="card-img-top" src="./images/icon_noblind.png" alt="Accesso sezione audio" >
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Sezione con i testi</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div id="loading" class="container">Caricamento</div>
+	
+	<div class="navbar shadow-sm" style="z-index: 9999; height:80px;   padding: 1px;  box-shadow: 0 8px 6px -6px black;" >
+	  <a href="#">
+		<img class="card-img-top" src="./images/logo-complesso-mobile.png" alt="Accesso sezione lettura Screen reader">
+		</a>
+	</div>
 
-  <!-- Uncomment the line below when ready to test with fake data -->
-  <script src="scripts/app.js" async></script>
+	<div class="main" id="main" class="container-fluid" >
+		<div class="container-fluid" style="background-color: #a5133a; padding: 10px">
+			<div class="row" style="margin-top: 10px;">
+			
+				<div class="col text-center">
+					<!-- PRESENTAZIONE -->
+					<div style="background-color:rgba(0, 0, 0, 0.1); padding: 10px; margin-bottom: 20px;">
+						<h5 style="color: white;"><span style="display:block">Area archeologica</span><span>Palazzo Montivecchi</span></h5>
+						<img class="img-fluid img-thumbnail "  src="./images/palazzo_motivecchi.jpg" alt="Accesso sezione lettura Screen reader"></img>
+					</div>
+				</div>
+			</div>
+				
+				
+			<div class="row">	
+				<div class="col">
+						<div style="background-color:rgba(0, 0, 0, 0.1); padding: 10px; margin-bottom: 20px;">
+							<h5 style="color: white;">Sezioni</h5>
+							<ul class="list-group">
+							  <li class="list-group-item"><a href="./presentazione.html">Presentazione Progetto</a></li>
+							  <li class="list-group-item"><a href="./lista_audio.html">Audioguida</a></li>
+							  <li class="list-group-item">Guida in versione testuale</li>
+							</ul>
+						</div>
+				</div>
+			</div>
+				
+				
+			<div class="row">						
+				<div class="col ">
+						<div style="background-color:rgba(0, 0, 0, 0.1); padding: 10px; margin-bottom: 20px;">
+							<h5 style="color: white;">Info</h5>
+								<div style="background-color: white; border-radius: 5px; border: 1px solid white; padding: 10px; ">
+								Sede: Via Verdi, 15 - 35139 Padova<br>
+								Fondazione Antonveneta<br>
+								Telefono: <a href="tel:+390496995038">049-6995038</a><br>
+								Fax: 049-6993705<br>
+								mail: <a href="mailto:info@fondazioneantonveneta.it">info@fondazioneantonveneta.it</a>
+							</div>
+						</div>
+					</div>	
+			</div>	
+
+				
+			</div>
+		</div>
+
+	
+	<footer style="height:60px;   padding: 1px;     background: #a12037;">
+		<div class="container">
+			<div class="row">
+			<div class="col ">
+	
+								<span class="text-footer left" style="color: white">Banca Monte dei Paschi di Siena S.p.A. GRUPPO IVA MPS - Partita IVA 01483500524</span>
+				</div>			
+			</div>					
+		</div><!-- .container -->
+	</footer>
+
+	<script src="scripts/app.js" async></script>
 
 </body>
 
 </html>
+
+
+
+
+<!--div class="row" style="margin-top: 10px;">
+				<div class="col"></div>
+				<div class="col-8">
+					<div class="card" style="padding:15px !important">
+						<a href="testo.html">
+							<img class="card-img-top" src="./images/icon_noblind.png" alt="Accesso sezione audio" >
+						</a>
+						<div class="card-body" style="background-color: #a5133a">
+							<h5 class="card-title" style="color:white;">Sezione con i testi</h5>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col"></div>
+			</div-->
