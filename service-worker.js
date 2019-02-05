@@ -5,9 +5,11 @@ var cacheName = 'appFinal-1';
 var filesToCache = [
   'manifest.json',
   /* HTML */
-  'index.html'
-  ,'audio.html',
+  'index.html',
+  'audio.html',
   'testo.html',
+  'lista_audio.html',
+  'presentazione.html',
 
   // CSS 
   'styles/bootstrap.min.css',
@@ -19,6 +21,10 @@ var filesToCache = [
 
 
   // IMMAGNI 
+  'images/logo-complesso-mobile.png',
+  'images/palazzo_motivecchi.jpg',
+  'images/palazzo_motivecchi_2.jpg',
+  'images/logo-complesso-mobile.png',
   'images/icon_blind.png',
   'images/icon_noblind.png',
   'images/cavallo.jpg',
